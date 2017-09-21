@@ -20,8 +20,11 @@ int main() {
 
     cout << "Size of : " << l.getElements() << endl;
 
-    for (int k = 0; k < l.getElements() ; ++k) {
-        cout << "Value of " << k << " element in list is :: "<< l.getItem(k).getValue() << endl;
+    ListItem li1 = l.getFirst();
+    while (li1.getValue() != -1) {
+
+        cout << "val :: " << li1.getValue() << endl;
+        li1 = li1.getNext();
     }
 
     return 0;

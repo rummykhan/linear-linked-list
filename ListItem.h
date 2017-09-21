@@ -12,13 +12,15 @@ class ListItem {
 public:
     ListItem();
 
-    ListItem(int n);
+    explicit ListItem(int n);
 
     int getValue();
 
     void setValue(int n);
 
     void setNext(ListItem li);
+
+    ListItem getNext();
 };
 
 

@@ -29,10 +29,11 @@ void List::setPointer() {
 
     // mean last element
     if (elementNo == sizeof(items) - 1) {
-        items[elementNo].setNext(0);
+        ListItem item(-1);
+        items[elementNo].setNext(item);
     } else if (elementNo == 0) {
-        // mean first element only
-        items[elementNo].setNext(0);
+        ListItem item(-1);
+        items[elementNo].setNext(item);
     } else {
         items[elementNo - 1].setNext(items[elementNo]);
     }
@@ -48,4 +49,8 @@ ListItem List::getItem(int no) {
     }
 
     return items[no];
+}
+
+ListItem List::getFirst() {
+    return getItem(0);
 }

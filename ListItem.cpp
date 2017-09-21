@@ -25,3 +25,7 @@ void ListItem::setValue(int n) {
 void ListItem::setNext(ListItem n) {
     next = &n;
 }
+
+ListItem ListItem::getNext() {
+    return *next;
+}

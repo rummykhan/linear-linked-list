@@ -22,6 +22,8 @@ public:
 
     ListItem getItem(int no);
 
+    ListItem getFirst();
+
 private:
     void setPointer();
 };
